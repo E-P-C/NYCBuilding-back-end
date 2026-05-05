@@ -15,6 +15,11 @@ const inputPath = path.join(
   "raw-data",
   "Buildings_Subject_to_HPD_Jurisdiction_20260505.csv",
 );
+const bedbugInputPath = path.join(
+  __dirname,
+  "raw-data",
+  "Bedbug_Reporting_20260505.csv",
+);
 const MAX_BUILDINGS = 100;
 const normalizeBorough = (boro) => {
   if (!boro) return "";
@@ -161,7 +166,48 @@ const transformComplaintToHousingRecord = (row) => {
     recordDate,
   };
 };
+const getBedbugBin = (row) => safeString(row.BIN || row.bin);
 
+const getBedbugBBL = (row) => safeString(row.BBL || row.bbl);
+
+const getBedbugDate = (row) =>
+  safeString(row["Filing Date"] || row.FilingDate || row.filing_date);
+
+const transformBedbugToHousingRecord = (row) => {
+  const infestedCount = Number(
+    safeString(
+      row["Infested Dwelling Unit Count"] || row.infested_dwelling_unit_count,
+    ) || 0,
+  );
+
+  const eradicatedCount = Number(
+    safeString(row["Eradicated Unit Count"] || row.eradicated_unit_count) || 0,
+  );
+
+  const reinfestedCount = Number(
+    safeString(
+      row["Re-infested  Dwelling Unit Count"] ||
+        row["Re-infested Dwelling Unit Count"] ||
+        row.re_infested_dwelling_unit_count,
+    ) || 0,
+  );
+
+  const recordDateRaw = getBedbugDate(row);
+  const recordDate = recordDateRaw
+    ? new Date(recordDateRaw).toISOString()
+    : new Date().toISOString();
+
+  return {
+    sourceDataset: "Bedbug Reporting",
+    recordType: "bedbug report",
+    category: `infested units: ${infestedCount}, eradicated: ${eradicatedCount}, re-infested: ${reinfestedCount}`,
+    status:
+      infestedCount > 0 || reinfestedCount > 0
+        ? "reported"
+        : "no infestation reported",
+    recordDate,
+  };
+};
 const main = async () => {
   try {
     const csvText = fs.readFileSync(inputPath, "utf8");
@@ -245,6 +291,60 @@ const main = async () => {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
+    if (fs.existsSync(bedbugInputPath)) {
+      const bedbugText = fs.readFileSync(bedbugInputPath, "utf8");
+
+      const bedbugRecords = parse(bedbugText, {
+        columns: true,
+        skip_empty_lines: true,
+        bom: true,
+      });
+
+      const buildingsByBin = new Map();
+      const buildingsByBBL = new Map();
+
+      for (const building of finalBuildings) {
+        if (building.bin) buildingsByBin.set(building.bin, building);
+        if (building.bbl) buildingsByBBL.set(building.bbl, building);
+      }
+
+      let matchedBedbugReports = 0;
+
+      for (const bedbug of bedbugRecords) {
+        const bin = getBedbugBin(bedbug);
+        const bbl = getBedbugBBL(bedbug);
+
+        const building = buildingsByBin.get(bin) || buildingsByBBL.get(bbl);
+
+        if (!building) continue;
+
+        building.housingRecords.push(transformBedbugToHousingRecord(bedbug));
+        matchedBedbugReports += 1;
+      }
+
+      for (const building of finalBuildings) {
+        const bedbugReports = building.housingRecords.filter(
+          (record) => record.recordType === "bedbug report",
+        );
+
+        const positiveBedbugReports = bedbugReports.filter(
+          (record) => record.status === "reported",
+        );
+
+        if (positiveBedbugReports.length > 0) {
+          building.riskSummary.highlights.push("Bedbug history found");
+        }
+
+        building.riskSummary.highlights = [
+          ...new Set(building.riskSummary.highlights),
+        ];
+      }
+
+      console.log(`Read ${bedbugRecords.length} bedbug rows.`);
+      console.log(
+        `Matched ${matchedBedbugReports} bedbug reports to seeded buildings.`,
+      );
+    }
     fs.writeFileSync(
       outputPath,
       JSON.stringify(finalBuildings, null, 2),

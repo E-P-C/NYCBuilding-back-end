@@ -1,6 +1,8 @@
 import { ObjectId } from 'mongodb';
 import bcrypt from 'bcryptjs';
 import { users } from '../config/mongoCollections.js';
+import { reviews } from '../config/mongoCollections.js';
+import { shortlists } from '../config/mongoCollections.js';
 import {
   checkString,
   checkId,
@@ -95,4 +97,92 @@ export const toggleWatchlist = async (userId, buildingId) => {
   const op = inList ? { $pull: { watchlist: bid } } : { $addToSet: { watchlist: bid } };
   await col.updateOne({ _id: new ObjectId(userId) }, { ...op, $set: { updatedAt: new Date() } });
   return { watching: !inList };
+};
+
+export const getProfile = async (id) => {
+  id = checkId(id);
+  const col = await users();
+  const user = await col.findOne({ _id: new ObjectId(id) });
+  if (!user) throw 'user not found';
+  const { hashedPassword, ...profile } = user;
+  profile._id = profile._id.toString();
+  profile.watchlist = (profile.watchlist || []).map(wid => wid.toString());
+  return profile;
+};
+
+export const updateProfile = async (id, { firstName, lastName, email, username }) => {
+  id = checkId(id);
+  firstName = checkString(firstName, 'firstName');
+  lastName = checkString(lastName, 'lastName');
+  email = checkEmail(email);
+  username = checkUsername(username, 'username');
+
+  const col = await users();
+  const existing = await col.findOne({
+    _id: { $ne: new ObjectId(id) },
+    $or: [
+      { email: buildCaseInsensitiveExactMatch(email) },
+      { username: buildCaseInsensitiveExactMatch(username) }
+    ]
+  });
+  if (existing) throw 'email or username already taken';
+
+  const result = await col.findOneAndUpdate(
+    { _id: new ObjectId(id) },
+    { $set: { firstName, lastName, email, username, updatedAt: new Date() } },
+    { returnDocument: 'after' }
+  );
+  if (!result) throw 'user not found';
+
+  return {
+    _id: result._id.toString(),
+    firstName: result.firstName,
+    lastName: result.lastName,
+    username: result.username,
+    email: result.email,
+    role: result.role
+  };
+};
+
+export const changePassword = async (id, currentPassword, newPassword) => {
+  id = checkId(id);
+  currentPassword = checkPassword(currentPassword, 'currentPassword', { enforceStrength: false });
+  newPassword = checkPassword(newPassword, 'newPassword');
+
+  const col = await users();
+  const user = await col.findOne({ _id: new ObjectId(id) });
+  if (!user) throw 'user not found';
+
+  if (!(await bcrypt.compare(currentPassword, user.hashedPassword)))
+    throw 'current password is incorrect';
+
+  const hashedPassword = await bcrypt.hash(newPassword, 12);
+  await col.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: { hashedPassword, updatedAt: new Date() } }
+  );
+
+  return { updated: true };
+};
+
+export const deleteUser = async (id) => {
+  id = checkId(id);
+  const oid = new ObjectId(id);
+
+  const col = await users();
+  const user = await col.findOne({ _id: oid });
+  if (!user) throw 'user not found';
+
+  const reviewsCol = await reviews();
+  await reviewsCol.updateMany(
+    { userId: oid },
+    { $set: { status: 'deleted', updatedAt: new Date() } }
+  );
+
+  const shortlistsCol = await shortlists();
+  await shortlistsCol.deleteMany({ userId: oid });
+
+  await col.deleteOne({ _id: oid });
+
+  return { deleted: true };
 };

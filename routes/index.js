@@ -1,4 +1,5 @@
 import authRoutes from './auth.js';
+import userRoutes from './users.js';
 import buildingRoutes from './buildings.js';
 import reviewRoutes from './reviews.js';
 import shortlistRoutes from './shortlists.js';
@@ -7,6 +8,7 @@ import { sendApiError } from '../utils/api-response.js';
 
 export default function registerRoutes(app) {
   app.use(authRoutes);
+  app.use(userRoutes);
   app.use(buildingRoutes);
   app.use(reviewRoutes);
   app.use(shortlistRoutes);

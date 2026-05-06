@@ -10,9 +10,9 @@ import {
   checkQueryInt
 } from './validation.js';
 
-const BUILDINGS_DEFAULT_LIMIT = 20;
-const BUILDINGS_MAX_LIMIT = 100;
-const BUILDINGS_SEARCH_MAX_LENGTH = 120;
+export const BUILDINGS_DEFAULT_LIMIT = 20;
+export const BUILDINGS_MAX_LIMIT = 100;
+export const BUILDINGS_SEARCH_MAX_LENGTH = 120;
 const hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
 
 const normalizeBuildingInput = (data, { requireCoreFields = false } = {}) => {

@@ -10,8 +10,11 @@
     "ownerName": "",
     "managerName": "",
     "riskSummary": {
-      "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -19,7 +22,42 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-12-08T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-12-14T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-12-18T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-12-05T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-12-06T05:00:00.000Z"
       }
     ]
   },
@@ -35,7 +73,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -43,7 +81,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -59,7 +97,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -67,7 +105,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -83,7 +121,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -91,7 +129,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -107,7 +145,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -115,7 +153,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -131,7 +169,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -139,7 +177,21 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 418747",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Bedbug Reporting",
+        "recordType": "bedbug report",
+        "category": "infested units: 0, eradicated: 0, re-infested: 0",
+        "status": "no infestation reported",
+        "recordDate": "2022-04-13T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Bedbug Reporting",
+        "recordType": "bedbug report",
+        "category": "infested units: 0, eradicated: 0, re-infested: 0",
+        "status": "no infestation reported",
+        "recordDate": "2021-08-16T04:00:00.000Z"
       }
     ]
   },
@@ -155,7 +207,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -163,7 +215,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -179,7 +231,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -187,7 +239,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -203,7 +255,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -211,7 +263,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -227,7 +279,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -235,7 +287,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -251,7 +303,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -259,7 +311,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -275,7 +327,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -283,7 +335,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -298,8 +350,10 @@
     "ownerName": "",
     "managerName": "",
     "riskSummary": {
-      "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "highlights": [
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -307,7 +361,21 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2021-11-04T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2021-11-05T04:00:00.000Z"
       }
     ]
   },
@@ -323,7 +391,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -331,7 +399,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -347,7 +415,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -355,7 +423,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -371,7 +439,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -379,7 +447,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -395,7 +463,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -403,7 +471,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -419,7 +487,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -427,7 +495,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -443,7 +511,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -451,7 +519,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -466,8 +534,13 @@
     "ownerName": "",
     "managerName": "",
     "riskSummary": {
-      "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found",
+        "Multiple housing violations found",
+        "Class C violation history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -475,7 +548,52 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2022-12-05T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2022-12-16T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2022-12-26T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-12-09T05:00:00.000Z",
+        "description": "§ 27-2046.1 HMC: REPAIR OR REPLACE THE CARBON MONOXIDE DETECTING DEVICE(S). DEFECTIVE IN THE ENTIRE APARTMENT LOCATED AT APT 2FL, 2nd STORY, 1st APARTMENT FROM WEST AT NORTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2023-01-02T05:00:00.000Z",
+        "description": "§ 27-2029 ADMIN. CODE: PROVIDE AN ADEQUATE SUPPLY OF HEAT FOR THE APARTMENT IN THE ENTIRE APARTMENT LOCATED AT APT 2FL, 2nd STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2023-01-02T05:00:00.000Z",
+        "description": "§ 27-2024 ADMIN. CODE: PROVIDE ADEQUATE SUPPLY OF HOT WATER FOR THE FIXTURES ... IN THE ENTIRE APARTMENT LOCATED AT APT 2FL, 2nd STORY, 1st APARTMENT FROM SOUTH AT WEST"
       }
     ]
   },
@@ -491,7 +609,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -499,7 +617,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -515,7 +633,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -523,7 +641,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -539,7 +657,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -547,7 +665,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -563,7 +681,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -571,7 +689,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 923406",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -587,7 +705,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -595,7 +713,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -611,7 +729,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -619,7 +737,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -635,7 +753,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -643,7 +761,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -659,7 +777,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -667,7 +785,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -683,7 +801,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -691,7 +809,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -706,8 +824,11 @@
     "ownerName": "",
     "managerName": "",
     "riskSummary": {
-      "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -715,7 +836,56 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2022-09-21T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2023-05-19T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-06-08T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-10-23T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2024-01-18T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2024-01-18T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2025-06-04T04:00:00.000Z"
       }
     ]
   },
@@ -730,8 +900,13 @@
     "ownerName": "",
     "managerName": "",
     "riskSummary": {
-      "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found",
+        "Multiple housing violations found",
+        "Class C violation history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -739,7 +914,102 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2020-05-15T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2020-05-15T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2021-08-26T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2021-08-29T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2021-08-29T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2022-04-04T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2023-09-08T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-09-25T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2023-08-28T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "nov sent out",
+        "recordDate": "2022-04-05T04:00:00.000Z",
+        "description": "§ 27-2031 ADMIN. CODE: PROVIDE HOT WATER AT ALL HOT WATER FIXTURES IN THE ENTIRE APARTMENT LOCATED AT APT 1, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-04-05T04:00:00.000Z",
+        "description": "§ 27-2046.1 HMC: REPAIR OR REPLACE THE CARBON MONOXIDE DETECTING DEVICE(S). DEFECTIVE IN THE ENTIRE APARTMENT LOCATED AT APT 1, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-04-05T04:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF MICE IN THE ENTIRE APARTMENT LOCATED AT APT 1, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-04-05T04:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF BEDBUGS IN THE ENTIRE APARTMENT LOCATED AT APT 1, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
       }
     ]
   },
@@ -755,7 +1025,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -763,7 +1033,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -779,7 +1049,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -787,7 +1057,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -802,8 +1072,10 @@
     "ownerName": "",
     "managerName": "",
     "riskSummary": {
-      "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "highlights": [
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -811,7 +1083,14 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2025-03-01T05:00:00.000Z"
       }
     ]
   },
@@ -827,7 +1106,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -835,7 +1114,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -850,8 +1129,11 @@
     "ownerName": "",
     "managerName": "",
     "riskSummary": {
-      "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -859,7 +1141,42 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2020-07-21T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2020-07-23T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2020-07-29T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2020-07-31T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2021-03-14T05:00:00.000Z"
       }
     ]
   },
@@ -875,7 +1192,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -883,7 +1200,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -899,7 +1216,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -907,7 +1224,31 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "200-06 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11423",
+    "bin": "0",
+    "bbl": "10867-3",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -923,7 +1264,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -931,7 +1272,35 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 419533",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Bedbug Reporting",
+        "recordType": "bedbug report",
+        "category": "infested units: 0, eradicated: 0, re-infested: 0",
+        "status": "no infestation reported",
+        "recordDate": "2024-09-19T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Bedbug Reporting",
+        "recordType": "bedbug report",
+        "category": "infested units: 0, eradicated: 0, re-infested: 0",
+        "status": "no infestation reported",
+        "recordDate": "2023-10-30T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Bedbug Reporting",
+        "recordType": "bedbug report",
+        "category": "infested units: 0, eradicated: 0, re-infested: 0",
+        "status": "no infestation reported",
+        "recordDate": "2025-08-13T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Bedbug Reporting",
+        "recordType": "bedbug report",
+        "category": "infested units: 0, eradicated: 0, re-infested: 0",
+        "status": "no infestation reported",
+        "recordDate": "2025-08-13T04:00:00.000Z"
       }
     ]
   },
@@ -947,7 +1316,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -955,7 +1324,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -971,7 +1340,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -979,7 +1348,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -995,7 +1364,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -1003,7 +1372,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -1019,7 +1388,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -1027,7 +1396,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -1043,7 +1412,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -1051,7 +1420,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 921392",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -1067,7 +1436,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -1075,7 +1444,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -1091,7 +1460,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -1099,7 +1468,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -1115,7 +1484,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -1123,7 +1492,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 926140",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -1139,7 +1508,7 @@
     "managerName": "",
     "riskSummary": {
       "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -1147,7 +1516,7 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
       }
     ]
   },
@@ -1162,8 +1531,13 @@
     "ownerName": "",
     "managerName": "",
     "riskSummary": {
-      "highlights": [],
-      "lastCalculatedAt": "2026-04-22T01:46:32.418Z"
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found",
+        "Multiple housing violations found",
+        "Class C violation history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
     },
     "housingRecords": [
       {
@@ -1171,7 +1545,2159 @@
         "recordType": "registration",
         "category": "HPD jurisdiction / registration 0",
         "status": "active",
-        "recordDate": "2026-04-22T01:46:32.418Z"
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2022-01-10T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2022-02-01T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2022-02-01T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-01-14T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-01-16T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-01-16T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-01-17T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-01-18T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "nov sent out",
+        "recordDate": "2022-01-16T05:00:00.000Z",
+        "description": "§ 27-2033 ADM CODE PROVIDE READY ACCESS TO BUILDINGS HEATING SYSTEM LOCK DOOR AT BOILER ROOM"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-01-16T05:00:00.000Z",
+        "description": "§ 27-2024 ADM CODE PROVIDE ADEQUATE SUPPLY OF HOT WATER FOR THE FIXTURES IN KITCHEN AND BATHROOM IN THE ENTIRE APARTMENT LOCATED AT APT PRIVAT, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-01-16T05:00:00.000Z",
+        "description": "§ 27-2024 ADM CODE PROVIDE ADEQUATE SUPPLY OF COLD WATER FOR THE FIXTURES IN KITCHEN AND BATHROOM IN THE ENTIRE APARTMENT LOCATED AT APT PRIVAT, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-01-16T05:00:00.000Z",
+        "description": "§ 27-2029 ADM CODE PROVIDE AN ADEQUATE SUPPLY OF HEAT FOR THE APARTMENT IN THE ENTIRE APARTMENT LOCATED AT APT PRIVAT, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2023-01-18T05:00:00.000Z",
+        "description": "§ 27-2031 ADMIN. CODE: PROVIDE HOT WATER AT ALL HOT WATER FIXTURES IN THE ENTIRE APARTMENT LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM NORTH AT EAST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2023-01-18T05:00:00.000Z",
+        "description": "§ 27-2029 ADMIN. CODE: PROVIDE AN ADEQUATE SUPPLY OF HEAT FOR THE APARTMENT IN THE ENTIRE APARTMENT LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM NORTH AT EAST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2023-01-18T05:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF MICE IN THE ENTIRE APARTMENT LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM NORTH AT EAST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2023-01-18T05:00:00.000Z",
+        "description": "§ 27-2046.1 HMC: REPAIR OR REPLACE THE CARBON MONOXIDE DETECTING DEVICE(S). ; MISSING IN THE ENTIRE APARTMENT LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM NORTH AT EAST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2023-01-18T05:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: PROPERLY REPAIR WITH SIMILAR MATERIAL THE BROKEN OR DEFECTIVE WOOD FLOOR IN THE 1st ROOM FROM NORTH LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM NORTH AT EAST"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "218-41 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4230846",
+    "bbl": "10768-43",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "218-14 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4534824",
+    "bbl": "10767-13",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found",
+        "Multiple housing violations found",
+        "Class C violation history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2021-07-20T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-01-12T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-01-17T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "nov sent out",
+        "recordDate": "2021-07-22T04:00:00.000Z",
+        "description": "§ 27-2024 ADMIN. CODE: PROVIDE ADEQUATE SUPPLY OF HOT WATER FOR THE FIXTURES ALL HOT WATER FIXTURES IN THE ENTIRE APARTMENT LOCATED AT APT 2NDFLO, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2021-07-22T04:00:00.000Z",
+        "description": "§ 27-2024 ADMIN. CODE: PROVIDE ADEQUATE SUPPLY OF COLD WATER FOR THE FIXTURES AT BATHTUB IN THE ENTIRE APARTMENT LOCATED AT APT 2NDFLO, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2021-07-22T04:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF ROACHES IN THE ENTIRE APARTMENT LOCATED AT APT 2NDFLO, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "nov sent out",
+        "recordDate": "2023-01-14T05:00:00.000Z",
+        "description": "§ 27-2031 ADMIN. CODE: PROVIDE HOT WATER AT ALL HOT WATER FIXTURES IN THE ENTIRE APARTMENT LOCATED AT APT 1FL, 1st STORY, 2nd APARTMENT FROM EAST AT SOUTH"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "220-01 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231119",
+    "bbl": "10785-1",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "218-42 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4230803",
+    "bbl": "10767-25",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "206-07 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4232017",
+    "bbl": "10854-43",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "222-17 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231333",
+    "bbl": "10805-44",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "217-36 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4230675",
+    "bbl": "10761-22",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "218-12 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4534823",
+    "bbl": "10767-12",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "217-16 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4230669",
+    "bbl": "10761-10",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2024-02-15T05:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "207-16 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4232588",
+    "bbl": "10875-7",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "218-09 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4230820",
+    "bbl": "10768-1",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "208-14 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4232618",
+    "bbl": "10876-17",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "217-64 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4230683",
+    "bbl": "10761-35",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "218-15 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4434673",
+    "bbl": "10768-55",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 419534",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "218-04 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4230795",
+    "bbl": "10767-8",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "205-11 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11423",
+    "bin": "4231988",
+    "bbl": "10852-21",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2021-05-14T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2022-12-19T05:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "221-07 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231137",
+    "bbl": "10785-43",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "208-08 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4232617",
+    "bbl": "10876-5",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "219-36 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4230916",
+    "bbl": "10773-119",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "194-10 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11423",
+    "bin": "4536021",
+    "bbl": "10861-31",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "222-21 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231332",
+    "bbl": "10805-43",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "194-17 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11423",
+    "bin": "4231800",
+    "bbl": "10841-25",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "197-10 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11423",
+    "bin": "4232232",
+    "bbl": "10864-5",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.267Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.267Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "197-06 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11423",
+    "bin": "4232231",
+    "bbl": "10864-3",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "198-13 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11423",
+    "bin": "4467481",
+    "bbl": "10845-21",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "220-28 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231011",
+    "bbl": "10779-15",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2025-01-27T05:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "220-34 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231012",
+    "bbl": "10779-17",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2025-01-27T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2025-04-09T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2025-05-12T04:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "220-39 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4536677",
+    "bbl": "10785-49",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2025-01-27T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2025-04-09T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2025-05-06T04:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "220-27 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231141",
+    "bbl": "10785-56",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2025-01-27T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2025-04-09T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2025-05-06T04:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "207-18 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4232589",
+    "bbl": "10875-9",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "220-29 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231140",
+    "bbl": "10785-54",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 928449",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2021-11-29T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2023-10-18T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2023-11-01T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2023-10-17T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2024-11-20T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2024-12-18T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2024-12-18T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2025-01-08T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "violation closed",
+        "recordDate": "2021-06-15T04:00:00.000Z",
+        "description": "§ 27-2010, 2011, 2012 ADMIN. CODE: REMOVE THE ACCUMULATION OF REFUSE AND/OR RUBBISH AND MAINTAIN IN A CLEAN CONDITION THE AT THE FRONT YARD"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "195-02 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11423",
+    "bin": "4232190",
+    "bbl": "10862-22",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "194-11 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11423",
+    "bin": "4231801",
+    "bbl": "10841-27",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 928844",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "202-09 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11423",
+    "bin": "4231939",
+    "bbl": "10849-23",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2025-07-05T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2025-07-05T04:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "218-05 100 AVENUE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4230821",
+    "bbl": "10768-2",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 925687",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2022-10-25T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2022-10-25T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "violation dismissed",
+        "recordDate": "2022-10-28T04:00:00.000Z",
+        "description": "§ 27-2073 ADM CODE - DISCONTINUE UNLAWFUL COOKING SPACE OR FILE PLANS AND APPLICATION WITH THIS DEPARTMENT TO LEGALIZE SAME, IF LAWFULLY FEASIBLE GAS RANGE AT KITCHEN AT CELLAR"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "violation dismissed",
+        "recordDate": "2022-10-28T04:00:00.000Z",
+        "description": "§ 27-2087 ADM CODE - DISCONTINUE USE OF ROOMS FOR LIVING, DISCONNECT PLUMBING FIXTURES WHERE ILLEGAL AND PROPERLY SEAL PIPE CONNECTIONS WATER CLOSET ,WASHBASIN, SHOWERSTALL AND KITCHEN SINK AT CELLAR"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "220-15 100 DRIVE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231018",
+    "bbl": "10779-36",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 917381",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "220-39 100 DRIVE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231013",
+    "bbl": "10779-24",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "220-19 100 DRIVE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231017",
+    "bbl": "10779-34",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "219-50 100 DRIVE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4230918",
+    "bbl": "10773-124",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "221-02 100 DRIVE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231023",
+    "bbl": "10780-13",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Multiple housing complaints found",
+        "Heat or hot water complaint history found",
+        "Multiple housing violations found",
+        "Class C violation history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2020-05-12T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2020-05-23T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2020-10-09T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2020-11-02T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2020-11-02T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2020-11-04T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2021-11-23T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2021-11-23T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2025-01-22T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2025-01-22T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2026-02-01T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2026-02-02T05:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "notice of issuance sent to tenant",
+        "recordDate": "2021-07-23T04:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF ROACHES IN THE ENTIRE APARTMENT LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "defect letter issued",
+        "recordDate": "2021-07-23T04:00:00.000Z",
+        "description": "§ 27-2017.3 HMC: TRACE AND REPAIR THE SOURCE AND ABATE THE VISIBLE MOLD CONDITION... APPROX 20 SQ. FT. AT CEILING IN THE BATHROOM LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "notice of issuance sent to tenant",
+        "recordDate": "2021-07-23T04:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF RODENTS RATS IN THE ENTIRE APARTMENT LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2021-07-23T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: ABATE THE NUISANCE CONSISTING OF HOT PLATE BEING USED FOR COOKING IN THE KITCHEN LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2021-07-23T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: PROPERLY REPAIR THE BROKEN OR DEFECTIVE PILOT LIGHT AT STOVE IN THE KITCHEN LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2021-07-27T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPAIR THE BROKEN OR DEFECTIVE PLASTERED SURFACES AND PAINT IN UNIFORM COLOR AT CEILING IN THE 1st ROOM FROM EAST AT SOUTH LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "defect letter issued",
+        "recordDate": "2021-07-27T04:00:00.000Z",
+        "description": "§ 27-2017.3 HMC: TRACE AND REPAIR THE SOURCE AND ABATE THE VISIBLE MOLD CONDITION... APPROX. 12 SQ FT AT CEILING IN THE 1st BATHROOM LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2021-07-27T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPAIR THE BROKEN OR DEFECTIVE PLASTERED SURFACES AND PAINT IN UNIFORM COLOR AT CEILING IN THE 21st ROOM FROM EAST AT NORTH LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2021-07-27T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PAINT THAT TESTED POSITIVE FOR LEAD CONTENT AND THAT IS PEELING OR ON A DETERIORATED SUBSURFACE - USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) 1st DOOR FRAME FROM WEST AT NORTH WALL IN THE FOYER LOCATED AT APT 1, 2nd STORY, 1st A"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2021-07-27T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PAINT THAT TESTED POSITIVE FOR LEAD CONTENT AND THAT IS PEELING OR ON A DETERIORATED SUBSURFACE - USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) 1st WINDOW FRAME FROM EAST AT SOUTH WALL, 2nd WINDOW FRAME FROM EAST AT SOUTH WALL IN "
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2021-07-27T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PAINT THAT TESTED POSITIVE FOR LEAD CONTENT AND THAT IS PEELING OR ON A DETERIORATED SUBSURFACE - USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) BASEBOARD AT SOUTH WALL, BASEBOARD AT EAST WALL, 1st DOOR FRAME FROM SOUTH AT WEST WAL"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2021-07-27T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PAINT THAT TESTED POSITIVE FOR LEAD CONTENT AND THAT IS PEELING OR ON A DETERIORATED SUBSURFACE - USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) 1st WINDOW FRAME FROM WEST AT NORTH WALL, 1st WINDOW FRAME FROM NORTH AT EAST WALL IN "
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2021-07-27T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PAINT THAT TESTED POSITIVE FOR LEAD CONTENT AND THAT IS PEELING OR ON A DETERIORATED SUBSURFACE - USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) 1st DOOR FRAME FROM WEST AT NORTH WALL, 1st WINDOW FRAME FROM EAST AT SOUTH WALL IN TH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2021-07-27T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PAINT THAT TESTED POSITIVE FOR LEAD CONTENT AND THAT IS PEELING OR ON A DETERIORATED SUBSURFACE - USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) 1st WINDOW FRAME FROM WEST AT NORTH WALL IN THE 2nd BATHROOM LOCATED AT APT 1, 2nd STO"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "nov sent out",
+        "recordDate": "2021-07-27T04:00:00.000Z",
+        "description": "§ 27-2056.7, 27-2056.8, 27-2056.9 ADM CODE -CERTIFY COMPLIANCE WITH LEAD-BASED PAINT HAZARD CONTROL REQUIREMENTS DURING PERIOD OF UNIT VACANCY BY PERFORMING ACTIVITIES NECESSARY TO ABATE TESTED LEAD-BASED PAINT FROM REQUIRED WINDOW AND/OR DOOR FRICTION SURFACES FOR APARTMENT AND MAKE FLOORS SMOOTH A"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "first no access to re- inspect violation",
+        "recordDate": "2021-12-01T05:00:00.000Z",
+        "description": "§ 27-2017.3 HMC: TRACE AND REPAIR THE SOURCE AND ABATE THE VISIBLE MOLD CONDITION... APPROX. 2 SQ FT AT CEILING IN THE 21st ROOM FROM NORTH AT EAST LOCATED AT APT 2, 1st STORY, 1st APARTMENT FROM EAST AT SOUTH ORIGINAL VIOLATION 14714593 ISSUED 01-DEC-21 HAS BEEN UPGRADED TO CLASS B PER ADMINISTRATI"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2021-12-01T05:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF MICE IN THE ENTIRE APARTMENT LOCATED AT APT 2, 1st STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2021-12-01T05:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPAIR THE ROOF SO THAT IT WILL NOT LEAK OVER CEILING IN THE 21st ROOM FROM NORTH AT EAST LOCATED AT APT 2, 1st STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-06-03T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPAIR THE BROKEN OR DEFECTIVE PLASTERED SURFACES AND PAINT IN UNIFORM COLOR CEILING AND WEST WALL AT PUBLIC HALL, 1st STORY"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-06-03T04:00:00.000Z",
+        "description": "§ 27-2026, 2027 HMC: PROPERLY REPAIR THE SOURCE AND ABATE THE EVIDENCE OF A WATER LEAK AT CEILING AND WEST WALL AT PUBLIC HALL, 1st STORY"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-06-04T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPAIR THE BROKEN OR DEFECTIVE PLASTERED SURFACES AND PAINT IN UNIFORM COLOR THE CEILING IN THE FOYER LOCATED AT APT 2NDFLO, 1st STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-06-04T04:00:00.000Z",
+        "description": "§ 27-2026, 2027 HMC: PROPERLY REPAIR THE SOURCE AND ABATE THE EVIDENCE OF A WATER LEAK AT CEILING IN THE FOYER LOCATED AT APT 2NDFLO, 1st STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-06-04T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPAIR THE BROKEN OR DEFECTIVE PLASTERED SURFACES AND PAINT IN UNIFORM COLOR THE CEILING IN THE BATHROOM LOCATED AT APT 2NDFLO, 1st STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-06-04T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPAIR THE BROKEN OR DEFECTIVE PLASTERED SURFACES AND PAINT IN UNIFORM COLOR THE EAST WALL IN THE 22nd ROOM FROM NORTH AT EAST LOCATED AT APT 2NDFLO, 1st STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-06-04T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPAIR THE BROKEN OR DEFECTIVE PLASTERED SURFACES AND PAINT IN UNIFORM COLOR THE CEILING IN THE 22nd ROOM FROM NORTH AT WEST LOCATED AT APT 2NDFLO, 1st STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-06-04T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PAINT THAT TESTED POSITIVE FOR LEAD CONTENT AND THAT IS PEELING OR ON A DETERIORATED SUBSURFACE - USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) 1st WINDOW SASH FROM EAST AT SOUTH WALL, 1st WINDOW SASH FROM NORTH AT EAST WALL IN TH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-06-04T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PAINT THAT TESTED POSITIVE FOR LEAD CONTENT AND THAT IS PEELING OR ON A DETERIORATED SUBSURFACE - USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) 1st WINDOW FRAME FROM WEST AT NORTH WALL IN THE 22nd ROOM FROM NORTH AT WEST LOCATED A"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-06-04T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PAINT THAT TESTED POSITIVE FOR LEAD CONTENT AND THAT IS PEELING OR ON A DETERIORATED SUBSURFACE - USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) 1st DOOR FRAME FROM EAST AT SOUTH WALL, 1st WINDOW SASH FROM WEST AT NORTH WALL IN THE"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-06-04T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PAINT THAT TESTED POSITIVE FOR LEAD CONTENT AND THAT IS PEELING OR ON A DETERIORATED SUBSURFACE - USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) 2nd CLOSET FROM EAST AT SOUTH WALL DOOR FRAME, 1st WINDOW SASH FROM WEST AT NORTH WALL"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-06-04T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PAINT THAT TESTED POSITIVE FOR LEAD CONTENT AND THAT IS PEELING OR ON A DETERIORATED SUBSURFACE - USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) CEILING, 1st WINDOW SASH FROM WEST AT NORTH WALL, 2nd WINDOW SASH FROM WEST AT NORTH W"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "first no access to re- inspect violation",
+        "recordDate": "2022-06-04T04:00:00.000Z",
+        "description": "§ 27-2017.3 HMC: TRACE AND REPAIR THE SOURCE AND ABATE THE VISIBLE MOLD CONDITION... APPX 8 SQ FT CEILING IN THE BATHROOM LOCATED AT APT 2NDFLO, 1st STORY, 1st APARTMENT FROM EAST AT SOUTH ORIGINAL VIOLATION 15200097 ISSUED 04-JUN-22 HAS BEEN UPGRADED TO CLASS B PER ADMINISTRATIVE CODE §27-2017.3a(3"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-08-09T04:00:00.000Z",
+        "description": "§ 27-2026, 2027 HMC: PROPERLY REPAIR THE SOURCE AND ABATE THE EVIDENCE OF A WATER LEAK AT CEILING IN THE ENTRANCE LOCATED AT APT FLOOR2, 1st STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF MICE IN THE ENTIRE APARTMENT LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2026, 2027 HMC: PROPERLY REPAIR THE SOURCE AND ABATE THE EVIDENCE OF A WATER LEAK AT CEILING IN THE FOYER LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2026, 2027 HMC: PROPERLY REPAIR THE SOURCE AND ABATE THE EVIDENCE OF A WATER LEAK AT WEST WALL IN THE FOYER LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "first no access to re- inspect violation",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2017.3 HMC: TRACE AND REPAIR THE SOURCE AND ABATE THE VISIBLE MOLD CONDITION... APPROXIMATELY 12 SQ FT AT CEILING IN THE FOYER LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2026, 2027 HMC: PROPERLY REPAIR THE SOURCE AND ABATE THE EVIDENCE OF A WATER LEAK AT CEILING IN THE 2nd ROOM FROM EAST LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "nov sent out",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2073 ADM CODE - PROVIDE AN ADEQUATE SUPPLY OF GAS TO THE FIXTURES AT GAS RANGE IN THE KITCHEN LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPAIR THE ROOF SO THAT IT WILL NOT LEAK OVER CEILING IN THE 1st ROOM FROM EAST AT SOUTH LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "nov sent out",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPAIR THE ROOF SO THAT IT WILL NOT LEAK OVER CEILING IN THE 1st BATHROOM LOCATED AT APT 1, 2nd STORY, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PRESUMED LEAD PAINT THAT IS PEELING OR ON A DETERIORATED SUBSURFACE USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) CEILING IN THE 2nd ROOM FROM EAST LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PRESUMED LEAD PAINT THAT IS PEELING OR ON A DETERIORATED SUBSURFACE USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) CEILING, WEST WALL IN THE FOYER LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PRESUMED LEAD PAINT THAT IS PEELING OR ON A DETERIORATED SUBSURFACE USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) CEILING IN THE 5th ROOM FROM EAST LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PRESUMED LEAD PAINT THAT IS PEELING OR ON A DETERIORATED SUBSURFACE USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) CEILING IN THE 1st BATHROOM FROM EAST LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PRESUMED LEAD PAINT THAT IS PEELING OR ON A DETERIORATED SUBSURFACE USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) CEILING IN THE 2nd BATHROOM FROM EAST LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2022-08-24T04:00:00.000Z",
+        "description": "§ 27-2056.6 ADM CODE - CORRECT THE LEAD-BASED PAINT HAZARD - PRESUMED LEAD PAINT THAT IS PEELING OR ON A DETERIORATED SUBSURFACE USING WORK PRACTICES SET FORTH IN 28 RCNY §11-06(B)(2) CEILING IN THE KITCHEN LOCATED AT APT 1, 1st APARTMENT FROM EAST AT SOUTH"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "222-05 100 DRIVE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231306",
+    "bbl": "10802-54",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "220-31 100 DRIVE",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231015",
+    "bbl": "10779-28",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "222-17 100 ROAD",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231314",
+    "bbl": "10803-40",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "222-23 100 ROAD",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231313",
+    "bbl": "10803-37",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "222-05 100 ROAD",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11429",
+    "bin": "4231317",
+    "bbl": "10803-48",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2024-12-02T05:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "314 100 STREET",
+    "borough": "Brooklyn",
+    "neighborhood": "",
+    "zipCode": "11209",
+    "bin": "3156140",
+    "bbl": "6137-68",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "316 100 STREET",
+    "borough": "Brooklyn",
+    "neighborhood": "",
+    "zipCode": "11209",
+    "bin": "3156141",
+    "bbl": "6137-69",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 824800",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "35-46 100 STREET",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11368",
+    "bin": "4043206",
+    "bbl": "1740-25",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Multiple housing violations found",
+        "Class C violation history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "PLUMBING",
+        "status": "close",
+        "recordDate": "2021-09-01T04:00:00.000Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "violation closed",
+        "recordDate": "2021-09-02T04:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF MICE IN THE ENTIRE APARTMENT LOCATED AT APT 1STFL, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "violation closed",
+        "recordDate": "2021-09-02T04:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF ROACHES IN THE ENTIRE APARTMENT LOCATED AT APT 1STFL, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "violation closed",
+        "recordDate": "2021-09-02T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: PROPERLY REPAIR THE BROKEN OR DEFECTIVE VINYL FLOORING IN THE PRIVATE HALLWAY LOCATED AT APT 1STFL, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class C violation",
+        "status": "violation closed",
+        "recordDate": "2021-09-02T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPLACE WITH NEW THE MISSING LOCKSET AT BUILDING ENTRANCE DOOR IN THE ENTRANCE LOCATED AT APT 1STFL, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "violation closed",
+        "recordDate": "2021-09-02T04:00:00.000Z",
+        "description": "§ 27-2046.1 HMC: REPAIR OR REPLACE THE CARBON MONOXIDE DETECTING DEVICE(S). DEFECTIVE IN THE ENTIRE APARTMENT LOCATED AT APT 1STFL, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "violation closed",
+        "recordDate": "2021-09-02T04:00:00.000Z",
+        "description": "§ 27-2005 ADMIN. CODE: REPAIR THE BROKEN OR DEFECTIVE PLASTERED SURFACES AND PAINT IN UNIFORM COLOR AT EAST WALL IN THE PRIVATE HALLWAY LOCATED AT APT 1STFL, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "violation closed",
+        "recordDate": "2021-10-10T04:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF ROACHES IN THE ENTIRE APARTMENT LOCATED AT APT 1STFL, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Violations",
+        "recordType": "violation",
+        "category": "Class B violation",
+        "status": "violation closed",
+        "recordDate": "2021-10-10T04:00:00.000Z",
+        "description": "HMC ADM CODE: § 27-2017.4 ABATE THE INFESTATION CONSISTING OF MICE IN THE ENTIRE APARTMENT LOCATED AT APT 1STFL, 1st STORY, 1st APARTMENT FROM SOUTH AT WEST"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "25-43 100 STREET",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11369",
+    "bin": "4041036",
+    "bbl": "1650-31",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [
+        "Heat or hot water complaint history found"
+      ],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
+      },
+      {
+        "sourceDataset": "Housing Maintenance Code Complaints and Problems",
+        "recordType": "complaint",
+        "category": "HEAT/HOT WATER",
+        "status": "close",
+        "recordDate": "2020-12-22T05:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "buildingName": "",
+    "streetAddress": "97-29 100 STREET",
+    "borough": "Queens",
+    "neighborhood": "",
+    "zipCode": "11416",
+    "bin": "4197640",
+    "bbl": "9402-38",
+    "ownerName": "",
+    "managerName": "",
+    "riskSummary": {
+      "highlights": [],
+      "lastCalculatedAt": "2026-05-05T20:51:33.268Z"
+    },
+    "housingRecords": [
+      {
+        "sourceDataset": "Buildings Subject to HPD Jurisdiction",
+        "recordType": "registration",
+        "category": "HPD jurisdiction / registration 0",
+        "status": "active",
+        "recordDate": "2026-05-05T20:51:33.268Z"
       }
     ]
   }

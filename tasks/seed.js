@@ -24,9 +24,6 @@ const __dirname = path.dirname(__filename);
 
 const seed = async () => {
   try {
-    // ----------------------------
-    // Clear existing data
-    // ----------------------------
     const reviewCollection = await reviews();
     const shortlistCollection = await shortlists();
     const buildingCollection = await buildings();
@@ -37,16 +34,8 @@ const seed = async () => {
     await buildingCollection.deleteMany({});
     await userCollection.deleteMany({});
 
-    await reviewCollection.createIndex(
-      { buildingId: 1, userId: 1 },
-      { unique: true, partialFilterExpression: { status: 'published' } }
-    );
-
     console.log("Old data removed.");
 
-    // ----------------------------
-    // Seed users
-    // ----------------------------
     const admin = await createUser(
       "Admin",
       "User",
@@ -55,7 +44,6 @@ const seed = async () => {
       "Admin1234!",
       "admin",
     );
-
     const cindy = await createUser(
       "Cindy",
       "Xin",
@@ -64,7 +52,6 @@ const seed = async () => {
       "Password123!",
       "user",
     );
-
     const peter = await createUser(
       "Peter",
       "Liao",
@@ -73,7 +60,6 @@ const seed = async () => {
       "Password123!",
       "user",
     );
-
     const amy = await createUser(
       "Amy",
       "Chen",
@@ -82,12 +68,33 @@ const seed = async () => {
       "Password123!",
       "user",
     );
+    const david = await createUser(
+      "David",
+      "Kim",
+      "david@example.com",
+      "davidk",
+      "Password123!",
+      "user",
+    );
+    const maria = await createUser(
+      "Maria",
+      "Garcia",
+      "maria@example.com",
+      "mariag",
+      "Password123!",
+      "user",
+    );
+    const jason = await createUser(
+      "Jason",
+      "Lee",
+      "jason@example.com",
+      "jasonl",
+      "Password123!",
+      "user",
+    );
 
     console.log("Users seeded.");
 
-    // ----------------------------
-    // Seed buildings from JSON
-    // ----------------------------
     const buildingsPath = path.join(__dirname, "seed-data", "buildings.json");
     const buildingsData = JSON.parse(fs.readFileSync(buildingsPath, "utf8"));
 
@@ -98,23 +105,51 @@ const seed = async () => {
     const createdBuildings = [];
 
     for (const building of buildingsData) {
-      const created = await createBuilding(building, admin._id);
+      const buildingForSeed = {
+        ...building,
+        buildingName:
+          building.buildingName && building.buildingName.trim()
+            ? building.buildingName
+            : `${building.streetAddress} Building`,
+        neighborhood:
+          building.neighborhood && building.neighborhood.trim()
+            ? building.neighborhood
+            : "Queens",
+        ownerName:
+          building.ownerName && building.ownerName.trim()
+            ? building.ownerName
+            : "Unknown Owner",
+        managerName:
+          building.managerName && building.managerName.trim()
+            ? building.managerName
+            : "Unknown Management",
+      };
+
+      const created = await createBuilding(buildingForSeed, admin._id);
       createdBuildings.push(created);
     }
 
     console.log(`Buildings seeded: ${createdBuildings.length}`);
 
-    if (createdBuildings.length < 4) {
+    if (createdBuildings.length < 10) {
       throw new Error(
-        "Need at least 4 buildings in buildings.json for reviews and shortlists.",
+        "Need at least 10 buildings in buildings.json for full-flow manual QA.",
       );
     }
 
-    const [building1, building2, building3, building4] = createdBuildings;
+    const [
+      building1,
+      building2,
+      building3,
+      building4,
+      building5,
+      building6,
+      building7,
+      building8,
+      building9,
+      building10,
+    ] = createdBuildings;
 
-    // ----------------------------
-    // Seed reviews
-    // ----------------------------
     await createReview(
       building1._id,
       cindy._id,
@@ -163,20 +198,63 @@ const seed = async () => {
       ["overall"],
     );
 
+    await createReview(
+      building5._id,
+      david._id,
+      "The building looked fine during the tour, but I want to compare its maintenance history before deciding.",
+      4,
+      ["maintenance", "overall"],
+    );
+
+    await createReview(
+      building6._id,
+      maria._id,
+      "I liked the apartment, but pest-related records would be a major concern for me.",
+      2,
+      ["pests", "maintenance"],
+    );
+
+    await createReview(
+      building7._id,
+      jason._id,
+      "Good location and transit access, but I would still check recent violations.",
+      4,
+      ["overall", "violations"],
+    );
+
+    await createReview(
+      building8._id,
+      cindy._id,
+      "This option seems safer than some others I checked, but I want to monitor updates.",
+      5,
+      ["overall", "maintenance"],
+    );
+
+    await createReview(
+      building9._id,
+      peter._id,
+      "The records seem mixed, so I would not sign before comparing it with other buildings.",
+      3,
+      ["violations", "overall"],
+    );
+
+    await createReview(
+      building10._id,
+      amy._id,
+      "The management information is useful, but I would like to see more history before applying.",
+      3,
+      ["responsiveness", "maintenance"],
+    );
+
     console.log("Reviews seeded.");
 
-    // ----------------------------
-    // Seed shortlists
-    // ----------------------------
     const cindyShortlist = await createShortlist(
       cindy._id,
       "My Apartment Hunt",
     );
-
     await addItemToShortlist(cindyShortlist._id, cindy._id, building1._id);
     await addItemToShortlist(cindyShortlist._id, cindy._id, building2._id);
     await addItemToShortlist(cindyShortlist._id, cindy._id, building4._id);
-
     await updateItemNote(
       cindyShortlist._id,
       cindy._id,
@@ -200,10 +278,8 @@ const seed = async () => {
       peter._id,
       "Buildings to Compare",
     );
-
     await addItemToShortlist(peterShortlist._id, peter._id, building2._id);
     await addItemToShortlist(peterShortlist._id, peter._id, building3._id);
-
     await updateItemNote(
       peterShortlist._id,
       peter._id,
@@ -217,16 +293,76 @@ const seed = async () => {
       "Check whether litigation is still active before considering.",
     );
 
+    const amyShortlist = await createShortlist(amy._id, "Safer Queens Options");
+    await addItemToShortlist(amyShortlist._id, amy._id, building4._id);
+    await addItemToShortlist(amyShortlist._id, amy._id, building8._id);
+    await addItemToShortlist(amyShortlist._id, amy._id, building10._id);
+    await updateItemNote(
+      amyShortlist._id,
+      amy._id,
+      building4._id,
+      "Looks clean and has lower risk signals.",
+    );
+    await updateItemNote(
+      amyShortlist._id,
+      amy._id,
+      building8._id,
+      "Good candidate for comparison because the review is positive.",
+    );
+    await updateItemNote(
+      amyShortlist._id,
+      amy._id,
+      building10._id,
+      "Need to check management history before deciding.",
+    );
+
+    const davidShortlist = await createShortlist(
+      david._id,
+      "Tour Follow-up List",
+    );
+    await addItemToShortlist(davidShortlist._id, david._id, building5._id);
+    await addItemToShortlist(davidShortlist._id, david._id, building6._id);
+    await addItemToShortlist(davidShortlist._id, david._id, building9._id);
+    await updateItemNote(
+      davidShortlist._id,
+      david._id,
+      building5._id,
+      "Follow up after apartment tour.",
+    );
+    await updateItemNote(
+      davidShortlist._id,
+      david._id,
+      building6._id,
+      "Possible pest concern. Compare carefully.",
+    );
+    await updateItemNote(
+      davidShortlist._id,
+      david._id,
+      building9._id,
+      "Mixed risk profile, keep as backup option.",
+    );
+
     console.log("Shortlists seeded.");
 
-    // ----------------------------
-    // Seed watchlists
-    // ----------------------------
     await toggleWatchlist(cindy._id, building1._id);
     await toggleWatchlist(cindy._id, building4._id);
+    await toggleWatchlist(cindy._id, building8._id);
 
     await toggleWatchlist(peter._id, building2._id);
+    await toggleWatchlist(peter._id, building9._id);
+
     await toggleWatchlist(amy._id, building3._id);
+    await toggleWatchlist(amy._id, building4._id);
+    await toggleWatchlist(amy._id, building10._id);
+
+    await toggleWatchlist(david._id, building5._id);
+    await toggleWatchlist(david._id, building6._id);
+
+    await toggleWatchlist(maria._id, building6._id);
+    await toggleWatchlist(maria._id, building7._id);
+
+    await toggleWatchlist(jason._id, building7._id);
+    await toggleWatchlist(jason._id, building9._id);
 
     console.log("Watchlists seeded.");
     console.log("Seed complete.");

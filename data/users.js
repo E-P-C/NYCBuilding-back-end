@@ -23,6 +23,22 @@ const normalizeLoginCredential = (value) =>
         value: checkUsername(value, "username"),
       };
 
+const serializeUserForAdmin = (user) => ({
+  _id: user._id.toString(),
+  firstName: user.firstName,
+  lastName: user.lastName,
+  email: user.email,
+  username: user.username,
+  role: user.role,
+  isBanned: user.isBanned === true,
+  createdAt: user.createdAt,
+  updatedAt: user.updatedAt,
+  bannedAt: user.bannedAt,
+  bannedByAdminId: user.bannedByAdminId?.toString(),
+  promotedAt: user.promotedAt,
+  promotedByAdminId: user.promotedByAdminId?.toString(),
+});
+
 export const createUser = async (
   firstName,
   lastName,
@@ -56,6 +72,7 @@ export const createUser = async (
       usernameNormalized,
       hashedPassword,
       role,
+      isBanned: false,
       watchlist: [],
       createdAt: now,
       updatedAt: now,
@@ -82,6 +99,10 @@ export const loginUser = async (username, password) => {
     throw "invalid username or password";
   }
 
+  if (user.isBanned === true) {
+    throw "account is banned";
+  }
+
   return {
     _id: user._id.toString(),
     firstName: user.firstName,
@@ -89,6 +110,7 @@ export const loginUser = async (username, password) => {
     username: user.username,
     email: user.email,
     role: user.role,
+    isBanned: false,
   };
 };
 
@@ -120,6 +142,68 @@ export const toggleWatchlist = async (userId, buildingId) => {
   );
 
   return { watching: !inList };
+};
+
+export const getAllUsersForAdmin = async () => {
+  const col = await users();
+  const userList = await col
+    .find({})
+    .sort({ createdAt: -1 })
+    .toArray();
+
+  return userList.map(serializeUserForAdmin);
+};
+
+export const banUser = async (id, adminId) => {
+  id = checkId(id, "userId");
+  adminId = checkId(adminId, "adminId");
+
+  if (id === adminId) {
+    throw "admins cannot ban their own account";
+  }
+
+  const now = new Date();
+  const col = await users();
+  const result = await col.findOneAndUpdate(
+    { _id: new ObjectId(id) },
+    {
+      $set: {
+        isBanned: true,
+        bannedAt: now,
+        bannedByAdminId: new ObjectId(adminId),
+        updatedAt: now,
+      },
+    },
+    { returnDocument: "after" }
+  );
+
+  if (!result) throw "user not found";
+
+  return serializeUserForAdmin(result);
+};
+
+export const promoteUserToAdmin = async (id, adminId) => {
+  id = checkId(id, "userId");
+  adminId = checkId(adminId, "adminId");
+
+  const now = new Date();
+  const col = await users();
+  const result = await col.findOneAndUpdate(
+    { _id: new ObjectId(id) },
+    {
+      $set: {
+        role: "admin",
+        promotedAt: now,
+        promotedByAdminId: new ObjectId(adminId),
+        updatedAt: now,
+      },
+    },
+    { returnDocument: "after" }
+  );
+
+  if (!result) throw "user not found";
+
+  return serializeUserForAdmin(result);
 };
 
 export const getProfile = async (id) => {

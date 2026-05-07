@@ -25,6 +25,11 @@ const violationsInputPath = path.join(
   "raw-data",
   "Housing_Maintenance_Code_Violations_20260505.csv",
 );
+const litigationsInputPath = path.join(
+  __dirname,
+  "raw-data",
+  "Housing_Litigations_20260506.csv",
+);
 const MAX_BUILDINGS = 100;
 const normalizeBorough = (boro) => {
   if (!boro) return "";
@@ -257,6 +262,48 @@ const transformViolationToHousingRecord = (row) => {
     description: description.slice(0, 300),
   };
 };
+
+const getLitigationBin = (row) => safeString(row.BIN || row.bin);
+
+const getLitigationBBL = (row) => safeString(row.BBL || row.bbl);
+
+const getLitigationDate = (row) =>
+  safeString(row.CaseOpenDate || row.caseopendate);
+
+const transformLitigationToHousingRecord = (row) => {
+  const caseType = safeString(row.CaseType || row.casetype);
+
+  const status = safeString(row.CaseStatus || row.casestatus);
+
+  const recordDateRaw = getLitigationDate(row);
+
+  const recordDate = recordDateRaw
+    ? new Date(recordDateRaw).toISOString()
+    : new Date().toISOString();
+
+  return {
+    sourceDataset: "Housing Litigations",
+    recordType: "litigation",
+    category: caseType || "housing litigation",
+    status: status.toLowerCase(),
+    recordDate,
+  };
+};
+
+const computeRiskScore = (building) => {
+  return (
+    building.complaintsCount * 1 +
+    building.violationsCount * 2 +
+    building.bedbugCount * 3 +
+    building.litigationsCount * 4
+  );
+};
+
+const computeRiskLevel = (score) => {
+  if (score >= 15) return "High";
+  if (score >= 6) return "Medium";
+  return "Low";
+};
 const main = async () => {
   try {
     const csvText = fs.readFileSync(inputPath, "utf8");
@@ -466,6 +513,89 @@ const main = async () => {
         `Matched ${matchedViolations} violations to seeded buildings.`,
       );
     }
+    if (fs.existsSync(litigationsInputPath)) {
+      const litigationsText = fs.readFileSync(litigationsInputPath, "utf8");
+
+      const litigationRecords = parse(litigationsText, {
+        columns: true,
+        skip_empty_lines: true,
+        bom: true,
+      });
+
+      const buildingsByBin = new Map();
+      const buildingsByBBL = new Map();
+
+      for (const building of finalBuildings) {
+        if (building.bin) {
+          buildingsByBin.set(building.bin, building);
+        }
+
+        if (building.bbl) {
+          buildingsByBBL.set(building.bbl, building);
+        }
+      }
+
+      let matchedLitigations = 0;
+
+      for (const litigation of litigationRecords) {
+        const bin = getLitigationBin(litigation);
+        const bbl = getLitigationBBL(litigation);
+
+        const building = buildingsByBin.get(bin) || buildingsByBBL.get(bbl);
+
+        if (!building) continue;
+
+        building.housingRecords.push(
+          transformLitigationToHousingRecord(litigation),
+        );
+
+        matchedLitigations += 1;
+      }
+
+      for (const building of finalBuildings) {
+        const litigationRecords = building.housingRecords.filter(
+          (record) => record.recordType === "litigation",
+        );
+
+        if (litigationRecords.length > 0) {
+          building.riskSummary.highlights.push(
+            "Housing litigation history found",
+          );
+        }
+
+        building.riskSummary.highlights = [
+          ...new Set(building.riskSummary.highlights),
+        ];
+      }
+
+      console.log(`Read ${litigationRecords.length} litigation rows.`);
+
+      console.log(
+        `Matched ${matchedLitigations} litigations to seeded buildings.`,
+      );
+    }
+
+    for (const building of finalBuildings) {
+      building.complaintsCount = building.housingRecords.filter(
+        (record) => record.recordType === "complaint",
+      ).length;
+
+      building.violationsCount = building.housingRecords.filter(
+        (record) => record.recordType === "violation",
+      ).length;
+
+      building.bedbugCount = building.housingRecords.filter(
+        (record) => record.recordType === "bedbug report",
+      ).length;
+
+      building.litigationsCount = building.housingRecords.filter(
+        (record) => record.recordType === "litigation",
+      ).length;
+
+      building.riskScore = computeRiskScore(building);
+      building.riskLevel = computeRiskLevel(building.riskScore);
+    }
+
     fs.writeFileSync(
       outputPath,
       JSON.stringify(finalBuildings, null, 2),

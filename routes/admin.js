@@ -1,9 +1,36 @@
 import { Router } from 'express';
-import { buildingData } from '../data/index.js';
+import { buildingData, userData } from '../data/index.js';
 import { requireAdmin } from '../middleware/auth.js';
 import { createApiHandler } from '../utils/api-response.js';
 
 const router = Router();
+
+router.get(
+  '/admin/users',
+  requireAdmin,
+  createApiHandler(
+    async () => userData.getAllUsersForAdmin(),
+    { errorStatus: 400 }
+  )
+);
+
+router.patch(
+  '/admin/users/:id/ban',
+  requireAdmin,
+  createApiHandler(
+    async (req) => userData.banUser(req.params.id, req.session.user._id),
+    { errorStatus: 400 }
+  )
+);
+
+router.patch(
+  '/admin/users/:id/promote',
+  requireAdmin,
+  createApiHandler(
+    async (req) => userData.promoteUserToAdmin(req.params.id, req.session.user._id),
+    { errorStatus: 400 }
+  )
+);
 
 router.post(
   '/admin/buildings',

@@ -2,6 +2,7 @@ import express from 'express';
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import registerRoutes from './routes/index.js';
+import { apiRateLimiter } from './middleware/rate-limit.js';
 
 const app = express();
 const port = Number(process.env.PORT) || 3001;
@@ -16,6 +17,7 @@ app.use(session({
   saveUninitialized: false,
   cookie: { httpOnly: true, maxAge: 1000 * 60 * 60 * 24 }
 }));
+app.use(apiRateLimiter);
 
 registerRoutes(app);
 

@@ -1,9 +1,6 @@
 import { ObjectId } from 'mongodb';
 import bcrypt from 'bcryptjs';
-import { users } from '../config/mongoCollections.js';
-import { buildings } from '../config/mongoCollections.js';
-import { reviews } from '../config/mongoCollections.js';
-import { shortlists } from '../config/mongoCollections.js';
+import { users, buildings, reviews, shortlists } from '../config/mongoCollections.js';
 import {
   checkString,
   checkId,
@@ -34,6 +31,17 @@ const serializeProfile = (user) => ({
   watchlist: (user.watchlist || []).map((id) => id.toString()),
   createdAt: user.createdAt,
   updatedAt: user.updatedAt
+});
+
+const serializeBuilding = (building) => ({
+  _id: building._id.toString(),
+  streetAddress: building.streetAddress,
+  borough: building.borough,
+  ownerName: building.ownerName,
+  housingRecords: building.housingRecords,
+  riskSummary: building.riskSummary,
+  createdAt: building.createdAt,
+  updatedAt: building.updatedAt
 });
 
 export const createUser = async (
@@ -179,14 +187,7 @@ export const updateProfile = async (id, { firstName, lastName, email, username }
   );
   if (!result) throw 'user not found';
 
-  return {
-    _id: result._id.toString(),
-    firstName: result.firstName,
-    lastName: result.lastName,
-    username: result.username,
-    email: result.email,
-    role: result.role
-  };
+  return serializeProfile(result);
 };
 
 export const getUserWatchlist = async (id) => {
@@ -201,6 +202,7 @@ export const getUserWatchlist = async (id) => {
   const buildingCol = await buildings();
   const watchlistBuildings = await buildingCol
     .find({ _id: { $in: watchlistIds } })
+    .limit(100)
     .toArray();
   const buildingsById = new Map(
     watchlistBuildings.map((building) => [building._id.toString(), building])
@@ -208,7 +210,8 @@ export const getUserWatchlist = async (id) => {
 
   return watchlistIds
     .map((buildingId) => buildingsById.get(buildingId.toString()))
-    .filter(Boolean);
+    .filter(Boolean)
+    .map(serializeBuilding);
 };
 
 export const changePassword = async (id, currentPassword, newPassword) => {

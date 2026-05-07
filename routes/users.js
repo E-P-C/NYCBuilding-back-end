@@ -41,11 +41,14 @@ router.get(
   requireAuth,
   createApiHandler(
     async (req) => {
-      if (req.params.id !== req.session.user._id && req.session.user.role !== 'admin') {
+      const targetId = req.params.id.trim();
+      const currentUserId = String(req.session.user._id);
+
+      if (targetId !== currentUserId && req.session.user.role !== 'admin') {
         throw 'forbidden';
       }
 
-      return userData.getUserWatchlist(req.params.id);
+      return userData.getUserWatchlist(targetId);
     },
     { getErrorStatus: getUserErrorStatus }
   )

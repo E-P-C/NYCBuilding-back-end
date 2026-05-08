@@ -30,7 +30,7 @@ const litigationsInputPath = path.join(
   "raw-data",
   "Housing_Litigations_20260506.csv",
 );
-const MAX_BUILDINGS = 100;
+const MAX_BUILDINGS = 600;
 const normalizeBorough = (boro) => {
   if (!boro) return "";
   const value = boro.toString().trim().toUpperCase();
@@ -131,6 +131,29 @@ const dedupeBuildings = (buildings) => {
   }
 
   return result;
+};
+
+const sampleBuildingsByBorough = (buildings, maxBuildings) => {
+  const boroughs = [
+    "Queens",
+    "Brooklyn",
+    "Manhattan",
+    "Bronx",
+    "Staten Island",
+  ];
+
+  const perBorough = Math.floor(maxBuildings / boroughs.length);
+  const sampled = [];
+
+  for (const borough of boroughs) {
+    const boroughBuildings = buildings.filter(
+      (building) => building.borough === borough,
+    );
+
+    sampled.push(...boroughBuildings.slice(0, perBorough));
+  }
+
+  return sampled.slice(0, maxBuildings);
 };
 
 const getComplaintBin = (row) =>
@@ -316,7 +339,11 @@ const main = async () => {
 
     const usableRows = records.filter(isUsableRow);
     const transformed = usableRows.map(transformRowToBuilding);
-    const deduped = dedupeBuildings(transformed).slice(0, MAX_BUILDINGS);
+    const deduped = sampleBuildingsByBorough(
+      dedupeBuildings(transformed),
+      MAX_BUILDINGS,
+    );
+
     let finalBuildings = deduped;
 
     if (fs.existsSync(complaintsInputPath)) {

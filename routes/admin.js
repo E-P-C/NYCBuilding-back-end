@@ -2,11 +2,36 @@ import { Router } from 'express';
 import { buildingData, reviewData, userData } from '../data/index.js';
 import { requireAdmin } from '../middleware/auth.js';
 import { createApiHandler } from '../utils/api-response.js';
+import { parseCsvObjects } from '../utils/csv.js';
 
 const router = Router();
 
 const getReviewModerationErrorStatus = (error) =>
   error === 'review not found' ? 404 : 400;
+
+const getBuildingImportPayload = (body) => {
+  if (Array.isArray(body)) {
+    return body;
+  }
+
+  if (typeof body === 'string') {
+    return parseCsvObjects(body);
+  }
+
+  if (!body || typeof body !== 'object') {
+    throw 'building import payload must be a JSON array, a buildings array, or CSV text';
+  }
+
+  if (Array.isArray(body.buildings)) {
+    return body.buildings;
+  }
+
+  if (typeof body.csv === 'string') {
+    return parseCsvObjects(body.csv);
+  }
+
+  throw 'building import payload must be a JSON array, a buildings array, or CSV text';
+};
 
 router.get(
   '/admin/users',
@@ -40,6 +65,18 @@ router.post(
   requireAdmin,
   createApiHandler(
     async (req) => buildingData.createBuilding(req.body, req.session.user._id),
+    { successStatus: 201, errorStatus: 400 }
+  )
+);
+
+router.post(
+  '/admin/buildings/import',
+  requireAdmin,
+  createApiHandler(
+    async (req) => buildingData.importBuildings(
+      getBuildingImportPayload(req.body),
+      req.session.user._id
+    ),
     { successStatus: 201, errorStatus: 400 }
   )
 );

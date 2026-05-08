@@ -7,6 +7,7 @@ import { apiRateLimiter } from './middleware/rate-limit.js';
 const app = express();
 const port = Number(process.env.PORT) || 3001;
 
+app.use(express.text({ type: ['text/csv', 'application/csv'] }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());

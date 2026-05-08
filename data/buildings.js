@@ -38,6 +38,10 @@ const buildBuildingSort = (sortBy, sortOrder) => {
   return { createdAt: direction, _id: 1 };
 };
 
+const normalizeDuplicatePart = (value) => String(value || '').trim().toLowerCase();
+const normalizeDuplicateKey = ({ streetAddress, borough }) =>
+  `${normalizeDuplicatePart(streetAddress)}|${normalizeDuplicatePart(borough)}`;
+
 const normalizeBuildingInput = (data, { requireCoreFields = false } = {}) => {
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
     throw 'data must be an object';
@@ -63,6 +67,60 @@ const normalizeBuildingInput = (data, { requireCoreFields = false } = {}) => {
   }
 
   return normalized;
+};
+
+const buildBuildingDocument = (data, normalized, adminId, now) => {
+  const {
+    _id,
+    createdByAdminId,
+    updatedByAdminId,
+    createdAt,
+    updatedAt,
+    ...safeData
+  } = data;
+
+  return {
+    ...safeData,
+    ...normalized,
+    riskSummary: data.riskSummary ?? { highlights: [], lastCalculatedAt: now },
+    housingRecords: data.housingRecords ?? [],
+    reviewCount: 0,
+    averageRating: 0,
+    issueTagFrequency: {},
+    createdByAdminId: new ObjectId(adminId),
+    updatedByAdminId: new ObjectId(adminId),
+    createdAt: now,
+    updatedAt: now
+  };
+};
+
+const normalizeBulkBuildingInput = (buildingList) => {
+  if (!Array.isArray(buildingList)) {
+    throw 'buildings must be an array';
+  }
+
+  if (buildingList.length === 0) {
+    throw 'buildings must contain at least one building';
+  }
+
+  const seen = new Set();
+
+  return buildingList.map((building, index) => {
+    const normalized = normalizeBuildingInput(building, { requireCoreFields: true });
+    const duplicateKey = normalizeDuplicateKey(normalized);
+
+    if (seen.has(duplicateKey)) {
+      throw `duplicate building in import at index ${index}: ${normalized.streetAddress}, ${normalized.borough}`;
+    }
+
+    seen.add(duplicateKey);
+
+    return {
+      original: building,
+      normalized,
+      duplicateKey
+    };
+  });
 };
 
 export const getAllBuildings = async ({
@@ -135,21 +193,39 @@ export const createBuilding = async (data, adminId) => {
   const normalized = normalizeBuildingInput(data, { requireCoreFields: true });
   const now = new Date();
   const col = await buildings();
-  const doc = {
-    ...data,
-    ...normalized,
-    riskSummary: data.riskSummary ?? { highlights: [], lastCalculatedAt: now },
-    housingRecords: data.housingRecords ?? [],
-    reviewCount: 0,
-    averageRating: 0,
-    issueTagFrequency: {},
-    createdByAdminId: new ObjectId(adminId),
-    updatedByAdminId: new ObjectId(adminId),
-    createdAt: now,
-    updatedAt: now
-  };
+  const doc = buildBuildingDocument(data, normalized, adminId, now);
   const { insertedId } = await col.insertOne(doc);
   return { _id: insertedId.toString() };
+};
+
+export const importBuildings = async (buildingList, adminId) => {
+  adminId = checkId(adminId, 'adminId');
+  const normalizedBuildings = normalizeBulkBuildingInput(buildingList);
+  const col = await buildings();
+  const boroughs = [...new Set(normalizedBuildings.map(({ normalized }) => normalized.borough))];
+  const existingBuildings = await col
+    .find(
+      { borough: { $in: boroughs } },
+      { projection: { streetAddress: 1, borough: 1 } }
+    )
+    .toArray();
+  const existingKeys = new Set(existingBuildings.map(normalizeDuplicateKey));
+  const duplicate = normalizedBuildings.find(({ duplicateKey }) => existingKeys.has(duplicateKey));
+
+  if (duplicate) {
+    throw `building already exists: ${duplicate.normalized.streetAddress}, ${duplicate.normalized.borough}`;
+  }
+
+  const now = new Date();
+  const docs = normalizedBuildings.map(({ original, normalized }) =>
+    buildBuildingDocument(original, normalized, adminId, now)
+  );
+  const result = await col.insertMany(docs, { ordered: true });
+
+  return {
+    insertedCount: result.insertedCount,
+    insertedIds: Object.values(result.insertedIds).map((id) => id.toString())
+  };
 };
 
 export const updateBuilding = async (id, data, adminId) => {

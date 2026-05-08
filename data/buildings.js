@@ -6,6 +6,7 @@ import {
   checkId,
   checkOptionalBoundedText,
   checkOptionalBorough,
+  checkOptionalEnum,
   checkBorough,
   checkQueryInt
 } from './validation.js';
@@ -13,7 +14,29 @@ import {
 export const BUILDINGS_DEFAULT_LIMIT = 20;
 export const BUILDINGS_MAX_LIMIT = 100;
 export const BUILDINGS_SEARCH_MAX_LENGTH = 120;
+export const BUILDINGS_NEIGHBORHOOD_MAX_LENGTH = 120;
+export const BUILDING_RISK_LEVEL_VALUES = Object.freeze(['Low', 'Medium', 'High']);
+export const BUILDING_SORT_VALUES = Object.freeze(['risk', 'reviews', 'date']);
+export const BUILDING_SORT_ORDER_VALUES = Object.freeze(['asc', 'desc']);
 const hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
+
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const buildBuildingSort = (sortBy, sortOrder) => {
+  if (!sortBy) return undefined;
+
+  const direction = sortOrder === 'asc' ? 1 : -1;
+
+  if (sortBy === 'risk') {
+    return { riskScore: direction, createdAt: -1, _id: 1 };
+  }
+
+  if (sortBy === 'reviews') {
+    return { reviewCount: direction, createdAt: -1, _id: 1 };
+  }
+
+  return { createdAt: direction, _id: 1 };
+};
 
 const normalizeBuildingInput = (data, { requireCoreFields = false } = {}) => {
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
@@ -42,12 +65,35 @@ const normalizeBuildingInput = (data, { requireCoreFields = false } = {}) => {
   return normalized;
 };
 
-export const getAllBuildings = async ({ search, borough, page = 1, limit = 20 } = {}) => {
+export const getAllBuildings = async ({
+  search,
+  borough,
+  neighborhood,
+  riskLevel,
+  sortBy,
+  sortOrder = 'desc',
+  page = 1,
+  limit = 20
+} = {}) => {
   search = checkOptionalBoundedText(search, 'search', {
     maxLength: BUILDINGS_SEARCH_MAX_LENGTH,
     emptyValue: undefined
   });
   borough = checkOptionalBorough(borough, 'borough');
+  neighborhood = checkOptionalBoundedText(neighborhood, 'neighborhood', {
+    maxLength: BUILDINGS_NEIGHBORHOOD_MAX_LENGTH,
+    emptyValue: undefined
+  });
+  riskLevel = checkOptionalEnum(riskLevel, BUILDING_RISK_LEVEL_VALUES, 'riskLevel', {
+    caseInsensitive: true
+  });
+  sortBy = checkOptionalEnum(sortBy, BUILDING_SORT_VALUES, 'sortBy', {
+    caseInsensitive: true
+  });
+  sortOrder = checkOptionalEnum(sortOrder, BUILDING_SORT_ORDER_VALUES, 'sortOrder', {
+    caseInsensitive: true,
+    emptyValue: 'desc'
+  });
   page = checkQueryInt(page, 'page', { defaultValue: 1, min: 1 });
   limit = checkQueryInt(limit, 'limit', {
     defaultValue: BUILDINGS_DEFAULT_LIMIT,
@@ -59,9 +105,18 @@ export const getAllBuildings = async ({ search, borough, page = 1, limit = 20 } 
   const query = {};
   if (search) query.$text = { $search: search };
   if (borough) query.borough = borough;
+  if (neighborhood) query.neighborhood = new RegExp(`^${escapeRegExp(neighborhood)}$`, 'i');
+  if (riskLevel) query.riskLevel = riskLevel;
   const skip = (page - 1) * limit;
+  const sort = buildBuildingSort(sortBy, sortOrder);
+  let cursor = col.find(query);
+
+  if (sort) {
+    cursor = cursor.sort(sort);
+  }
+
   const [items, total] = await Promise.all([
-    col.find(query).skip(skip).limit(limit).toArray(),
+    cursor.skip(skip).limit(limit).toArray(),
     col.countDocuments(query)
   ]);
   return { items, total, page, limit };

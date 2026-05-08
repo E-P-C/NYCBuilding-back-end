@@ -5,12 +5,19 @@ import {
   VALIDATION_LIMITS,
   checkBoundedText,
   checkId,
+  checkEnum,
   checkInt,
   checkIssueTags
 } from './validation.js';
 
 export const DUPLICATE_REVIEW_ERROR =
   'review already exists for this building; please edit your existing review instead';
+export const REVIEW_MODERATION_STATUS_VALUES = Object.freeze(['flagged', 'hidden', 'deleted']);
+
+const REVIEW_STATUS_BY_MODERATION_STATUS = Object.freeze({
+  hidden: 'hidden',
+  deleted: 'deleted'
+});
 
 const getIssueTagFrequency = (reviewList) => {
   const frequency = {};
@@ -105,6 +112,53 @@ export const createReview = async (buildingId, userId, reviewText, rating, issue
 
   return { _id: insertedId.toString() };
 };
+
+const moderateReviewByAdmin = async (id, adminId, moderationStatus) => {
+  id = checkId(id);
+  adminId = checkId(adminId, 'adminId');
+  moderationStatus = checkEnum(
+    moderationStatus,
+    REVIEW_MODERATION_STATUS_VALUES,
+    'moderationStatus'
+  );
+
+  const now = new Date();
+  const update = {
+    moderationStatus,
+    moderatedByAdminId: new ObjectId(adminId),
+    moderatedAt: now,
+    updatedAt: now
+  };
+  const status = REVIEW_STATUS_BY_MODERATION_STATUS[moderationStatus];
+
+  if (status) {
+    update.status = status;
+  }
+
+  const col = await reviews();
+  const result = await col.findOneAndUpdate(
+    { _id: new ObjectId(id) },
+    { $set: update },
+    { returnDocument: 'after' }
+  );
+
+  if (!result) throw 'review not found';
+
+  if (status) {
+    await refreshBuildingReviewAggregation(result.buildingId.toString());
+  }
+
+  return result;
+};
+
+export const flagReviewByAdmin = async (id, adminId) =>
+  moderateReviewByAdmin(id, adminId, 'flagged');
+
+export const hideReviewByAdmin = async (id, adminId) =>
+  moderateReviewByAdmin(id, adminId, 'hidden');
+
+export const deleteReviewByAdmin = async (id, adminId) =>
+  moderateReviewByAdmin(id, adminId, 'deleted');
 
 export const updateReview = async (id, userId, reviewText, rating, issueTags) => {
   id = checkId(id);

@@ -1,9 +1,12 @@
 import { Router } from 'express';
-import { buildingData, userData } from '../data/index.js';
+import { buildingData, reviewData, userData } from '../data/index.js';
 import { requireAdmin } from '../middleware/auth.js';
 import { createApiHandler } from '../utils/api-response.js';
 
 const router = Router();
+
+const getReviewModerationErrorStatus = (error) =>
+  error === 'review not found' ? 404 : 400;
 
 router.get(
   '/admin/users',
@@ -56,6 +59,33 @@ router.delete(
   createApiHandler(
     async (req) => buildingData.deleteBuilding(req.params.id),
     { errorStatus: 400 }
+  )
+);
+
+router.patch(
+  '/admin/reviews/:id/flag',
+  requireAdmin,
+  createApiHandler(
+    async (req) => reviewData.flagReviewByAdmin(req.params.id, req.session.user._id),
+    { getErrorStatus: getReviewModerationErrorStatus }
+  )
+);
+
+router.patch(
+  '/admin/reviews/:id/hide',
+  requireAdmin,
+  createApiHandler(
+    async (req) => reviewData.hideReviewByAdmin(req.params.id, req.session.user._id),
+    { getErrorStatus: getReviewModerationErrorStatus }
+  )
+);
+
+router.delete(
+  '/admin/reviews/:id',
+  requireAdmin,
+  createApiHandler(
+    async (req) => reviewData.deleteReviewByAdmin(req.params.id, req.session.user._id),
+    { getErrorStatus: getReviewModerationErrorStatus }
   )
 );
 

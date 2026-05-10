@@ -31,6 +31,41 @@ router.get(
 );
 
 router.get(
+  '/neighborhoods/trends',
+  createApiHandler(
+    async (req) => buildingData.getNeighborhoodTrends(req.query.borough),
+    {
+      getErrorStatus: (error) => (typeof error === 'string' ? 400 : 500)
+    }
+  )
+);
+
+router.post(
+  '/buildings/score',
+  createApiHandler(
+    async (req) => {
+      const { buildingIds, weights } = req.body;
+      return buildingData.calculateCustomScores(buildingIds, weights);
+    },
+    {
+      getErrorStatus: (error) => (typeof error === 'string' ? 400 : 500)
+    }
+  )
+);
+
+router.get(
+  '/buildings/:id/alternatives',
+  createApiHandler(
+    async (req) =>
+      buildingData.getAlternatives(req.params.id, req.query.limit),
+    {
+      getErrorStatus: (error) =>
+        error === 'building not found' ? 404 : 400
+    }
+  )
+);
+
+router.get(
   '/buildings/:id',
   createApiHandler(
     async (req) => buildingData.getBuildingById(req.params.id),

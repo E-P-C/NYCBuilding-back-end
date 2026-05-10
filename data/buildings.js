@@ -265,3 +265,190 @@ export const getBuildingsByOwner = async (ownerName) => {
   const col = await buildings();
   return col.find({ ownerName }).toArray();
 };
+
+export const getNeighborhoodTrends = async (borough) => {
+  borough = checkOptionalBorough(borough, 'borough');
+  const col = await buildings();
+
+  const matchStage = borough ? { $match: { borough } } : { $match: {} };
+
+  const pipeline = [
+    matchStage,
+    {
+      $facet: {
+        boroughStats: [
+          {
+            $group: {
+              _id: '$borough',
+              buildingCount: { $sum: 1 },
+              totalComplaints: { $sum: '$complaintsCount' },
+              totalViolations: { $sum: '$violationsCount' },
+              totalBedbugs: { $sum: '$bedbugCount' },
+              totalLitigations: { $sum: '$litigationsCount' },
+              avgRiskScore: { $avg: '$riskScore' },
+              lowCount: {
+                $sum: { $cond: [{ $eq: ['$riskLevel', 'Low'] }, 1, 0] }
+              },
+              mediumCount: {
+                $sum: { $cond: [{ $eq: ['$riskLevel', 'Medium'] }, 1, 0] }
+              },
+              highCount: {
+                $sum: { $cond: [{ $eq: ['$riskLevel', 'High'] }, 1, 0] }
+              }
+            }
+          },
+          { $sort: { _id: 1 } }
+        ],
+        issueCategories: [
+          { $unwind: '$housingRecords' },
+          {
+            $group: {
+              _id: {
+                borough: '$borough',
+                category: '$housingRecords.category'
+              },
+              count: { $sum: 1 }
+            }
+          },
+          { $sort: { count: -1 } }
+        ]
+      }
+    }
+  ];
+
+  const [result] = await col.aggregate(pipeline).toArray();
+  const { boroughStats, issueCategories } = result;
+
+  const issueCategoriesByBorough = {};
+  for (const entry of issueCategories) {
+    const boroughName = entry._id.borough;
+    if (!issueCategoriesByBorough[boroughName]) {
+      issueCategoriesByBorough[boroughName] = [];
+    }
+    issueCategoriesByBorough[boroughName].push({
+      category: entry._id.category,
+      count: entry.count
+    });
+  }
+
+  const trends = boroughStats.map((stat) => ({
+    borough: stat._id,
+    buildingCount: stat.buildingCount,
+    totalComplaints: stat.totalComplaints,
+    totalViolations: stat.totalViolations,
+    totalBedbugs: stat.totalBedbugs,
+    totalLitigations: stat.totalLitigations,
+    avgRiskScore: Math.round(stat.avgRiskScore * 100) / 100,
+    riskDistribution: {
+      Low: stat.lowCount,
+      Medium: stat.mediumCount,
+      High: stat.highCount
+    },
+    topIssueCategories: (issueCategoriesByBorough[stat._id] || []).slice(0, 5)
+  }));
+
+  return { trends };
+};
+
+export const getAlternatives = async (id, limit) => {
+  id = checkId(id);
+  limit = checkQueryInt(limit, 'limit', { defaultValue: 5, min: 1, max: 10 });
+
+  const col = await buildings();
+  const sourceBuilding = await col.findOne({ _id: new ObjectId(id) });
+  if (!sourceBuilding) throw 'building not found';
+
+  if (sourceBuilding.riskLevel === 'Low') {
+    return {
+      alternatives: [],
+      sourceBuilding: {
+        _id: sourceBuilding._id,
+        riskScore: sourceBuilding.riskScore
+      }
+    };
+  }
+
+  const alternatives = await col
+    .find({
+      borough: sourceBuilding.borough,
+      _id: { $ne: new ObjectId(id) },
+      riskScore: { $lt: sourceBuilding.riskScore }
+    })
+    .sort({ riskScore: 1 })
+    .limit(limit)
+    .toArray();
+
+  return {
+    alternatives,
+    sourceBuilding: {
+      _id: sourceBuilding._id,
+      riskScore: sourceBuilding.riskScore
+    }
+  };
+};
+
+const CUSTOM_SCORE_DEFAULT_WEIGHTS = Object.freeze({
+  complaints: 1,
+  violations: 2,
+  bedbugs: 3,
+  litigations: 4
+});
+
+const computeCustomRiskLevel = (score) => {
+  if (score < 6) return 'Low';
+  if (score <= 15) return 'Medium';
+  return 'High';
+};
+
+export const calculateCustomScores = async (buildingIds, weights) => {
+  if (!Array.isArray(buildingIds) || buildingIds.length === 0) {
+    throw 'buildingIds must be a non-empty array';
+  }
+
+  const validatedIds = buildingIds.map((bid, index) => {
+    const validated = checkId(bid, `buildingIds[${index}]`);
+    return new ObjectId(validated);
+  });
+
+  const resolvedWeights = {
+    complaints: weights?.complaints ?? CUSTOM_SCORE_DEFAULT_WEIGHTS.complaints,
+    violations: weights?.violations ?? CUSTOM_SCORE_DEFAULT_WEIGHTS.violations,
+    bedbugs: weights?.bedbugs ?? CUSTOM_SCORE_DEFAULT_WEIGHTS.bedbugs,
+    litigations: weights?.litigations ?? CUSTOM_SCORE_DEFAULT_WEIGHTS.litigations
+  };
+
+  for (const [key, value] of Object.entries(resolvedWeights)) {
+    if (typeof value !== 'number' || !Number.isFinite(value)) {
+      throw `weights.${key} must be a finite number`;
+    }
+  }
+
+  const col = await buildings();
+  const docs = await col
+    .find({ _id: { $in: validatedIds } })
+    .toArray();
+
+  const result = docs.map((doc) => {
+    const customScore =
+      (doc.complaintsCount || 0) * resolvedWeights.complaints +
+      (doc.violationsCount || 0) * resolvedWeights.violations +
+      (doc.bedbugCount || 0) * resolvedWeights.bedbugs +
+      (doc.litigationsCount || 0) * resolvedWeights.litigations;
+
+    return {
+      _id: doc._id,
+      streetAddress: doc.streetAddress,
+      borough: doc.borough,
+      neighborhood: doc.neighborhood,
+      riskScore: doc.riskScore,
+      complaintsCount: doc.complaintsCount,
+      violationsCount: doc.violationsCount,
+      bedbugCount: doc.bedbugCount,
+      litigationsCount: doc.litigationsCount,
+      customScore: Math.round(customScore * 100) / 100,
+      riskLevel: computeCustomRiskLevel(customScore)
+    };
+  });
+
+  return { buildings: result };
+};

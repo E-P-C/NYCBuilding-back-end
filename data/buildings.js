@@ -237,7 +237,6 @@ export const updateBuilding = async (id, data, adminId) => {
     { _id: new ObjectId(id) },
     {
       $set: {
-        ...data,
         ...normalized,
         updatedByAdminId: new ObjectId(adminId),
         updatedAt: new Date()
@@ -245,15 +244,17 @@ export const updateBuilding = async (id, data, adminId) => {
     },
     { returnDocument: 'after' }
   );
-  if (!result) throw 'building not found';
-  return result;
+  const updated = result?.value ?? result;
+  if (!updated) throw 'building not found';
+  return updated;
 };
 
 export const deleteBuilding = async (id) => {
   id = checkId(id);
   const col = await buildings();
   const result = await col.findOneAndDelete({ _id: new ObjectId(id) });
-  if (!result) throw 'building not found';
+  const deleted = result?.value ?? result;
+  if (!deleted) throw 'building not found';
   return { deleted: true };
 };
 

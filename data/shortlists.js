@@ -43,8 +43,9 @@ export const addItemToShortlist = async (shortlistId, userId, buildingId) => {
     },
     { returnDocument: 'after' }
   );
-  if (!result) throw 'shortlist not found or not owned by user';
-  return result;
+  const updated = result?.value ?? result;
+  if (!updated) throw 'shortlist not found or not owned by user';
+  return updated;
 };
 
 export const updateItemNote = async (shortlistId, userId, buildingId, privateNote) => {
@@ -62,8 +63,9 @@ export const updateItemNote = async (shortlistId, userId, buildingId, privateNot
     { $set: { 'items.$.privateNote': privateNote, updatedAt: new Date() } },
     { returnDocument: 'after' }
   );
-  if (!result) throw 'shortlist item not found';
-  return result;
+  const updated = result?.value ?? result;
+  if (!updated) throw 'shortlist item not found';
+  return updated;
 };
 
 export const removeItemFromShortlist = async (shortlistId, userId, buildingId) => {
@@ -76,8 +78,9 @@ export const removeItemFromShortlist = async (shortlistId, userId, buildingId) =
     { $pull: { items: { buildingId: new ObjectId(buildingId) } }, $set: { updatedAt: new Date() } },
     { returnDocument: 'after' }
   );
-  if (!result) throw 'shortlist not found or not owned by user';
-  return result;
+  const updated = result?.value ?? result;
+  if (!updated) throw 'shortlist not found or not owned by user';
+  return updated;
 };
 
 export const deleteShortlist = async (shortlistId, userId) => {
@@ -85,6 +88,7 @@ export const deleteShortlist = async (shortlistId, userId) => {
   userId = checkId(userId, 'userId');
   const col = await shortlists();
   const result = await col.findOneAndDelete({ _id: new ObjectId(shortlistId), userId: new ObjectId(userId) });
-  if (!result) throw 'shortlist not found or not owned by user';
+  const deleted = result?.value ?? result;
+  if (!deleted) throw 'shortlist not found or not owned by user';
   return { deleted: true };
 };

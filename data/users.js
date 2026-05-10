@@ -34,6 +34,22 @@ const serializeProfile = (user) => ({
   updatedAt: user.updatedAt
 });
 
+const serializeUserForAdmin = (user) => ({
+  _id: user._id.toString(),
+  firstName: user.firstName,
+  lastName: user.lastName,
+  username: user.username,
+  email: user.email,
+  role: user.role,
+  isBanned: user.isBanned === true,
+  bannedAt: user.bannedAt,
+  bannedByAdminId: user.bannedByAdminId?.toString?.() ?? undefined,
+  promotedAt: user.promotedAt,
+  promotedByAdminId: user.promotedByAdminId?.toString?.() ?? undefined,
+  createdAt: user.createdAt,
+  updatedAt: user.updatedAt
+});
+
 const serializeBuilding = (building) => ({
   _id: building._id.toString(),
   streetAddress: building.streetAddress,
@@ -182,10 +198,9 @@ export const banUser = async (id, adminId) => {
     },
     { returnDocument: "after" }
   );
-
-  if (!result) throw "user not found";
-
-  return serializeUserForAdmin(result);
+  const updated = result?.value ?? result;
+  if (!updated) throw "user not found";
+  return serializeUserForAdmin(updated);
 };
 
 export const promoteUserToAdmin = async (id, adminId) => {
@@ -206,10 +221,9 @@ export const promoteUserToAdmin = async (id, adminId) => {
     },
     { returnDocument: "after" }
   );
-
-  if (!result) throw "user not found";
-
-  return serializeUserForAdmin(result);
+  const updated = result?.value ?? result;
+  if (!updated) throw "user not found";
+  return serializeUserForAdmin(updated);
 };
 
 export const getProfile = async (id) => {
@@ -254,9 +268,9 @@ export const updateProfile = async (id, { firstName, lastName, email, username }
     },
     { returnDocument: 'after' }
   );
-  if (!result) throw 'user not found';
-
-  return serializeProfile(result);
+  const updated = result?.value ?? result;
+  if (!updated) throw 'user not found';
+  return serializeProfile(updated);
 };
 
 export const getUserWatchlist = async (id) => {

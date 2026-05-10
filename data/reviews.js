@@ -113,6 +113,50 @@ export const createReview = async (buildingId, userId, reviewText, rating, issue
   return { _id: insertedId.toString() };
 };
 
+export const getAllReviewsForAdmin = async ({ limit = 200 } = {}) => {
+  limit = checkInt(limit, 'limit', 1, 500);
+
+  const col = await reviews();
+  const pipeline = [
+    { $sort: { createdAt: -1, _id: 1 } },
+    { $limit: limit },
+    {
+      $lookup: {
+        from: 'buildings',
+        localField: 'buildingId',
+        foreignField: '_id',
+        as: 'building'
+      }
+    },
+    { $unwind: { path: '$building', preserveNullAndEmptyArrays: true } },
+    {
+      $lookup: {
+        from: 'users',
+        localField: 'userId',
+        foreignField: '_id',
+        as: 'user'
+      }
+    },
+    { $unwind: { path: '$user', preserveNullAndEmptyArrays: true } },
+    {
+      $addFields: {
+        buildingAddress: '$building.streetAddress',
+        firstName: '$user.firstName',
+        lastName: '$user.lastName',
+        username: '$user.username'
+      }
+    },
+    {
+      $project: {
+        building: 0,
+        user: 0
+      }
+    }
+  ];
+
+  return col.aggregate(pipeline).toArray();
+};
+
 const moderateReviewByAdmin = async (id, adminId, moderationStatus) => {
   id = checkId(id);
   adminId = checkId(adminId, 'adminId');
@@ -141,14 +185,15 @@ const moderateReviewByAdmin = async (id, adminId, moderationStatus) => {
     { $set: update },
     { returnDocument: 'after' }
   );
+  const updated = result?.value ?? result;
 
-  if (!result) throw 'review not found';
+  if (!updated) throw 'review not found';
 
   if (status) {
-    await refreshBuildingReviewAggregation(result.buildingId.toString());
+    await refreshBuildingReviewAggregation(updated.buildingId.toString());
   }
 
-  return result;
+  return updated;
 };
 
 export const flagReviewByAdmin = async (id, adminId) =>
@@ -176,11 +221,12 @@ export const updateReview = async (id, userId, reviewText, rating, issueTags) =>
     { $set: { reviewText, rating, issueTags, updatedAt: new Date() } },
     { returnDocument: 'after' }
   );
-  if (!result) throw 'review not found or not owned by user';
+  const updated = result?.value ?? result;
+  if (!updated) throw 'review not found or not owned by user';
 
-  await refreshBuildingReviewAggregation(result.buildingId.toString());
+  await refreshBuildingReviewAggregation(updated.buildingId.toString());
 
-  return result;
+  return updated;
 };
 
 export const deleteReview = async (id, userId) => {
@@ -192,9 +238,10 @@ export const deleteReview = async (id, userId) => {
     { $set: { status: 'deleted', updatedAt: new Date() } },
     { returnDocument: 'after' }
   );
-  if (!result) throw 'review not found or not owned by user';
+  const updated = result?.value ?? result;
+  if (!updated) throw 'review not found or not owned by user';
 
-  await refreshBuildingReviewAggregation(result.buildingId.toString());
+  await refreshBuildingReviewAggregation(updated.buildingId.toString());
 
   return { deleted: true };
 };

@@ -53,7 +53,7 @@ router.patch(
       const buildingId = req.params.buildingId;
       await buildingData.getBuildingById(buildingId);
 
-      shortlistData.updateItemNote(
+      return await shortlistData.updateItemNote(
         req.params.id,
         req.session.user._id,
         req.params.buildingId,
@@ -72,7 +72,7 @@ router.delete(
       const buildingId = req.params.buildingId;
       await buildingData.getBuildingById(buildingId);
 
-      shortlistData.removeItemFromShortlist(
+      return await shortlistData.removeItemFromShortlist(
         req.params.id,
         req.session.user._id,
         req.params.buildingId

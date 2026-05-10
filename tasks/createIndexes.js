@@ -35,13 +35,18 @@ const createIndexes = async () => {
   );
 
   await buildingCollection.createIndex(
-    { borough: 1 },
-    { name: "building_borough_index" },
+    { borough: 1, zipCode: 1 },
+    { name: "building_borough_zip_code_index" },
   );
 
   await buildingCollection.createIndex(
-    { ownerName: 1 },
-    { name: "building_owner_name_index" },
+    { ownerName: 1, borough: 1 },
+    { name: "building_owner_borough_index" },
+  );
+
+  await buildingCollection.createIndex(
+    { borough: 1, riskLevel: 1 },
+    { name: "building_borough_risk_level_index" },
   );
 
   await reviewCollection.createIndex(
@@ -50,7 +55,7 @@ const createIndexes = async () => {
   );
 
   await reviewCollection.createIndex(
-    { buildingId: 1, userId: 1 },
+    { buildingId: 1, userId: 1, status: 1 },
     {
       unique: true,
       partialFilterExpression: { status: "published" },
